@@ -70,11 +70,11 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">FBMO <em>Vos Chaussures.</em></a></div>
+					<div id="gtco-logo"><a href="home">FBMO <em>Vos Chaussures.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li class="active"><a href="menu.html">Menu</a></li>
+						<li class="active"><a href="home">Menu</a></li>
 						<li class="has-dropdown">
 							<a href="services.html">par catégorie</a>
 							<ul class="dropdown">
@@ -84,11 +84,11 @@
 							</ul>
 						</li>
 						<li><a href="contact.html">Promotion</a></li>
+						<li><a href="connect">se connecter</a></li>
 						<li class="btn-cta"><a href="panier"><span>panier</span></a></li>
-					</ul>	
+					</ul>
 				</div>
 			</div>
-			
 		</div>
 	</nav>
 

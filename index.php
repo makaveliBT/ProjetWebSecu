@@ -1,4 +1,8 @@
-
+<?php  
+   
+    ini_set('session.bug_compat_warn', 0);
+ini_set('session.bug_compat_42', 0);
+?>
 
 <html>
     <head>
@@ -13,9 +17,13 @@
     <!-- Le corps -->
     
     <div id="corps">
+	
+		<div id="page">
 
 		<?php 
+		
 		define('ROOT',str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
+		define('WEBROOT',str_replace('index.php','',$_SERVER['SCRIPT_NAME']));
 
 
 		require(ROOT.'core/model.php');
@@ -26,6 +34,24 @@
 		$controller = $param[0];
 		if($param[0]==''){
 			$controller = "home";
+		}
+		if($param[0]=="administrateur"){
+			if(!empty($_SESSION)&& (!empty($_SESSION['test'])or !empty($_SESSION['testc']))){
+				$controller="administrateur"; }
+			else {
+				$controller='connect';
+				echo 'vous avez pas droit a cette page' ;
+			}	
+
+		}
+		if($param[0]=="panier"){
+			if(!empty($_SESSION)&&!empty($_SESSION['testc'])){
+				$controller="panier"; }
+			else {
+				$controller='connect';
+				echo 'vous avez pas droit a cette page' ;
+			}	
+
 		}
 		$action = isset($param [1]) ? $param[1] : 'index';
 
@@ -38,6 +64,7 @@
 			echo ' eror 404';
 		}
 		?>
+		</div>
     </div>
 	
 	

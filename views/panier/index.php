@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -68,50 +70,51 @@
 		
 	<div class="gtco-loader"></div>
 	
-	<div class="gtco-section">
-	
 		<!-- heared panier-->
 		<div class="panier">
-			<div>
-				<select id="qt" name="q">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-				</select><br>
-				<button type="button" class="add-to-cart" data-id="432" data-name="Pastilles" data-price="29,00" data-weight="97" data-url="/produit/pastilles-anti-douleurs/">Ajouter au panier</button>
-				
-				<div class="dropdown">
-					<div id="cart">
-						<p><span id="in-cart-items-num">0</span> Articles</p>
-					</div>
-				</div>
-			</div>
 			
 			
 			<!-- panier -->
 			<div>
 				<table class="table">
-					  <thead>
-						<tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
-					  </thead>
-					  <tbody id="cart-tablebody">
+						<thead>
+							<tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
+						</thead>
+						<tbody id="cart-tablebody">
+						<?php
+							$total=0;
+							for($i=0;$i<count($panier);$i++){
+								$total+=$panier[$i]['prix']*$panier[$i]['qte'];
+								echo "<tr>";
+									echo "<th>";
+										echo $panier[$i]['nomModel'];
+									echo "</th>";
+									echo "<th>";
+										echo $panier[$i]['prix'];
+									echo "</th>";
+									echo "<th>";
+										echo $panier[$i]['qte'];
+									echo "</th>";
+									echo "<th>";
+										echo $panier[$i]['nom'];
+									echo "</th>";
+								echo "</tr>";
+							}
+						?>
 					  </tbody>
 				</table>
 						
 				<p>Sous total : <span class="subtotal"></span>€</p>
 
 				<button id="confirm-command">Passer la commande</button>
+				
+				<form action="panier" method="post" name="$produit[0]['nomModel']">
+					<input id="submit" name="viderPanier" class="btn btn-primary">Vider le panier</input>
+				</form>
 			</div>
 		
 		</div>
-		
-	</div>
+	
 	<!-- </div> -->
 
 	<div class="gototop js-top">
@@ -142,8 +145,8 @@
 	<script src="js/bootstrap-datetimepicker.min.js"></script>
 
 
-	<!-- Main -->
-    <script src="js/cookie_Panier.js"></script>
+	<!-- Main >
+    <script src="js/cookie_Panier.js"></script-->
 
 	</body>
 </html>

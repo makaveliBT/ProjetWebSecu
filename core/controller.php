@@ -10,10 +10,9 @@ class Controller {
 		require(ROOT.'views/'.get_class($this).'/'.$filename.'.php');
 	}
 	
-	
 	function load_model($name){
-			require_once(ROOT."models/".strtolower($name).".php");
-			 $this->$name= new $name();
-		}
+		require_once(ROOT."models/".strtolower($name).".php");
+		$this->$name= new $name();
+	}
 }
 ?>

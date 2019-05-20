@@ -64,8 +64,6 @@
 		
 	<div class="gtco-loader"></div>
 	
-	<div id="page">
-	
 	
 	<div class="gtco-section">
 		<div class="gtco-container">
@@ -90,11 +88,9 @@
 					</div>
 					<div class="form-group">
 						<input type="submit" value="Se connecter" class="btn btn-primary" name="submit">
-						<input type="submit" href="registrer" value="S'inscrire" class="btn btn-primary">
 					</div>
-
 				</form>
-				
+				<a href="register">S'inscrire!</a>
 				
 				</div>
 			</div>

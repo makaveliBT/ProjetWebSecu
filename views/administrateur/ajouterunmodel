@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+	<header>
+		
+		<form action="http://localhost/ProjetWebSecu/administrateur"  method="POST">
+		<input type="text" name="nomModel" placeholder="ModelName">
+		<input type="text" name="sexe" placeholder="Sexe">
+		<input type="text" name="age" placeholder="Prix">
+		<button   type="submit" name="submit">signup</button> 
+		</form>
+	</header>	
+</html>

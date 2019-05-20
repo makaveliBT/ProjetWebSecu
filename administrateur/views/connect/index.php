@@ -8,7 +8,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FBMO Vos chaussures</title>
+	<title>Savory &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -61,12 +61,51 @@
 
 	</head>
 	<body>
+		
+	<div class="gtco-loader"></div>
 	
-	<div id = "page">
-		<?php
-			echo "bonjour";
-		?>
+	
+	<div class="gtco-section">
+		<div class="gtco-container">
+			<div class="col-md-12">
+				<div class="col-md-6 animate-box">
+				<h3>Se connecter</h3>
+				<form action="http://localhost/ProjetWebSecu/connect"  method="POST">
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label class="sr-only" for="email">email </label>
+							<input type="email" name="mail" class="form-control" placeholder="email"/>
+							<!--input type="text" id="name" class="form-control" placeholder="email"-->
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label class="sr-only" for="name">Mot de passe </label>
+							<input type="password" name="pwd" class="form-control" placeholder="mot de passe"/>
+							<!--input type="text" id="email" class="form-control" placeholder="mot de passe"-->
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Se connecter" class="btn btn-primary" name="submit">
+					</div>
+				</form>
+				<a href="register">S'inscrire!</a>
+				
+				</div>
+			</div>
+		</div>
 	</div>
+	<!-- </div> -->
+
+	
+	<!--form action="http://localhost/ProjetWebSecu/connect"  method="POST">
+		<input type="text" name="mail" placeholder="ModelName">
+		<input type="text" name="pwd" placeholder="Sexe">
+		
+		<button   type="submit" name="submit">signup</button> 
+		</form>
+	</div>-->
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
